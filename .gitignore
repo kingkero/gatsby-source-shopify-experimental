@@ -1,7 +1,6 @@
-node_modules
-.env
-*.graphql
-.cache
-*.log
-public/
-coverage/
+*.js
+*.js.map
+*.d.ts
+README.md
+
+!jest.config.js
