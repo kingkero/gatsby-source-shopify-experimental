@@ -2,5 +2,6 @@
 *.js.map
 *.d.ts
 README.md
+node_modules
 
 !jest.config.js

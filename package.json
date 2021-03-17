@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "tsc-watch --outDir .",
     "build": "tsc --outDir .",
-    "prepublish": "yarn build && cp ../README.md .",
+    "prepublish": "yarn build",
     "test": "jest"
   },
   "repository": {
