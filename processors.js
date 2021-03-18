@@ -9,7 +9,7 @@ function collectionsProcessor(objects, builder, gatsbyApi) {
         const [fullId, remoteType] = result.id.match(node_builder_1.pattern) || [];
         if (remoteType === `Product`) {
             const productIds = [fullId];
-            let j = i - 1;
+            let j = i;
             while (objects[j].id !== result.__parentId) {
                 const [siblingId, siblingRemoteType] = objects[j].id.match(node_builder_1.pattern) || [];
                 /**
