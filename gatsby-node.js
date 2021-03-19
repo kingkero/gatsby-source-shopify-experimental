@@ -52,7 +52,7 @@ const shopifyNodeTypes = [
 async function sourceChangedNodes(gatsbyApi, pluginOptions) {
     var _a, _b, _c, _d;
     const { incrementalProducts, incrementalOrders, incrementalCollections, finishLastOperation, completedOperation, cancelOperationInProgress, } = operations_1.createOperations(pluginOptions, gatsbyApi);
-    const lastBuildTime = new Date((_b = (_a = gatsbyApi.store.getState().status.plugins) === null || _a === void 0 ? void 0 : _a[`gatsby-source-shopify-experimental`]) === null || _b === void 0 ? void 0 : _b.lastBuildTime);
+    const lastBuildTime = new Date((_b = (_a = gatsbyApi.store.getState().status.plugins) === null || _a === void 0 ? void 0 : _a[`gatsby-source-shopify-experimental-cachebust`]) === null || _b === void 0 ? void 0 : _b.lastBuildTime);
     for (const nodeType of shopifyNodeTypes) {
         gatsbyApi
             .getNodesByType(nodeType)
@@ -97,7 +97,7 @@ async function sourceNodes(gatsbyApi, pluginOptions) {
         await operations_1.createOperations(pluginOptions, gatsbyApi).cancelOperation(lastOperationId);
         await gatsbyApi.cache.set(constants_1.LAST_SHOPIFY_BULK_OPERATION, undefined);
     }
-    const lastBuildTime = (_b = (_a = gatsbyApi.store.getState().status.plugins) === null || _a === void 0 ? void 0 : _a[`gatsby-source-shopify-experimental`]) === null || _b === void 0 ? void 0 : _b.lastBuildTime;
+    const lastBuildTime = (_b = (_a = gatsbyApi.store.getState().status.plugins) === null || _a === void 0 ? void 0 : _a[`gatsby-source-shopify-experimental-cachebust`]) === null || _b === void 0 ? void 0 : _b.lastBuildTime;
     if (lastBuildTime) {
         gatsbyApi.reporter.info(`Cache is warm, running an incremental build`);
         await sourceChangedNodes(gatsbyApi, pluginOptions);

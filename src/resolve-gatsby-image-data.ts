@@ -64,7 +64,7 @@ export async function resolveGatsbyImageData(
     formats,
     layout,
     sourceMetadata,
-    pluginName: `gatsby-source-shopify-experimental`,
+    pluginName: `gatsby-source-shopify-experimental-cachebust`,
     filename: basename,
     generateImageSource,
   });

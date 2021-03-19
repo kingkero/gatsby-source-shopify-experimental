@@ -51,7 +51,7 @@ async function resolveGatsbyImageData(image, _a) {
     };
     return gatsby_plugin_image_1.generateImageData(Object.assign(Object.assign({}, options), { formats,
         layout,
-        sourceMetadata, pluginName: `gatsby-source-shopify-experimental`, filename: basename, generateImageSource }));
+        sourceMetadata, pluginName: `gatsby-source-shopify-experimental-cachebust`, filename: basename, generateImageSource }));
 }
 exports.resolveGatsbyImageData = resolveGatsbyImageData;
 //# sourceMappingURL=resolve-gatsby-image-data.js.map
